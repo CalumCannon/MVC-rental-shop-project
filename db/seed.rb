@@ -7,11 +7,7 @@ customer1 = Customer.new({
 'name' => 'Jim Raynor',
 'age' => 35,
 })
-
 customer1.save()
-# customer1.delete()
-customer1.name = "NEW NAME"
-customer1.update()
 
 stock1 = Stock.new({
 'name' => 'item1',
@@ -20,8 +16,14 @@ stock1 = Stock.new({
 'image' => 'IMAGE-URL'
 })
 stock1.save()
-stock1.name = "NEW STOCK"
-stock1.update();
+
+stock2 = Stock.new({
+'name' => 'item2',
+'amount' => 100,
+'age_rating' => 12,
+'image' => 'IMAGE-URL'
+})
+stock2.save()
 
 rental1 = Rental.new({
 'customer_id' => customer1.id,

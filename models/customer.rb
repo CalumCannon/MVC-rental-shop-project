@@ -30,5 +30,9 @@ class Customer
         SqlRunner.run(sql,values)
     end
 
+    def self.all
+      sql = "SELECT * FROM customers"
+      SqlRunner.run(sql)
+    end
 
 end

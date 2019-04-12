@@ -28,4 +28,9 @@ class Rental
           SqlRunner.run(sql,values)
       end
 
+      def self.all
+        sql = "SELECT * FROM rentals"
+        SqlRunner.run(sql)
+      end
+
 end
