@@ -35,4 +35,11 @@ class Customer
       SqlRunner.run(sql)
     end
 
+    def rentals
+      sql = "SELECT * FROM stocks INNER JOIN rentals ON rentals.customer_id = stocks.id WHERE rentals.customer_id = $1"
+      values = [@id]
+      results = SqlRunner.run(sql, values)
+      return results.map{|rental| Rental.new(rental)}
+    end
+
 end

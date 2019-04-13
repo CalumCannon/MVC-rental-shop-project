@@ -9,6 +9,12 @@ customer1 = Customer.new({
 })
 customer1.save()
 
+customer2 = Customer.new({
+'name' => 'John McClane',
+'age' => 30,
+})
+customer2.save()
+
 stock1 = Stock.new({
 'name' => 'item1',
 'amount' => 100,
@@ -31,4 +37,21 @@ rental1 = Rental.new({
 'rent_date' => '12/04/19'
 })
 rental1.save()
+
+rental2 = Rental.new({
+'customer_id' => customer1.id,
+'stock_id' => stock1.id,
+'rent_date' => '12/04/19'
+})
+rental2.save()
+
+rental3 = Rental.new({
+'customer_id' => customer2.id,
+'stock_id' => stock1.id,
+'rent_date' => '12/04/19'
+})
+rental3.save()
 # rental1.delete()
+
+binding.pry
+nil

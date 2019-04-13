@@ -34,5 +34,6 @@ class Stock
      SqlRunner.run(sql)
    end
 
+   
 
 end
