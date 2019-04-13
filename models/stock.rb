@@ -31,9 +31,10 @@ class Stock
 
    def self.all
      sql = "SELECT * FROM stocks"
-     SqlRunner.run(sql)
+     values = SqlRunner.run(sql)
+     return values.map{|stock| Stock.new(stock)}
    end
 
-   
+
 
 end

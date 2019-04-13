@@ -32,7 +32,8 @@ class Customer
 
     def self.all
       sql = "SELECT * FROM customers"
-      SqlRunner.run(sql)
+      values = SqlRunner.run(sql)
+      return values.map{|customer| Customer.new(customer)}
     end
 
     def rentals
