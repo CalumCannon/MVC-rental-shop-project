@@ -1,0 +1,24 @@
+<h1>RENTALS</h1>
+<a class="new-button" href="/rentals/new"><p>NEW RENTAL</p></a>
+<table>
+  <tr>
+    <th>Customer </th>
+    <th>Stock </th>
+    <th>Rent Date</th>
+  </tr>
+  <% for rental in @rentals %>
+  <tr>
+    <td> <a href="/customers/<%=  rental.customer_id %>" > <%= Customer.find_by_id(rental.customer_id).name %> </a></td>
+    <td> <a href="/stocks/<%= rental.stock_id %>" > <%= Stock.find_by_id(rental.stock_id).name %> </a></td>
+    <td><%= rental.rent_date %></td>
+    <td>
+
+     <form action="/rentals/<%= rental.id %>/delete" method="POST">
+      <input class="new-button" type="submit" value="DELETE" />
+    </form>
+    <a class="new-button" href="/rentals/<%= rental.id %>/restock"> RETURN </a>
+
+    </td>
+  </tr>
+  <% end %>
+</table>

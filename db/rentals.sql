@@ -12,13 +12,13 @@ CREATE TABLE stocks (
  id SERIAL8 PRIMARY KEY,
  name VARCHAR,
  amount INT,
- age_rating INT,
+ price INT,
  image TEXT
 );
 
 CREATE TABLE rentals (
  id SERIAL8 PRIMARY KEY,
- customer_id INT references customers(id),
- stock_id INT references stocks(id),
+ customer_id INT references customers(id) ON DELETE CASCADE,
+ stock_id INT references stocks(id) ON DELETE CASCADE,
  rent_date VARCHAR
 );

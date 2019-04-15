@@ -1,6 +1,6 @@
 class Rental
 
-      attr_reader :name, :age, :id
+      attr_reader :customer_id, :stock_id, :rent_date, :id
 
       def initialize( options )
         @id = options['id'].to_i if options['id']
@@ -32,6 +32,24 @@ class Rental
         sql = "SELECT * FROM rentals"
         values = SqlRunner.run(sql)
         return values.map{|rental| Rental.new(rental)}
+      end
+
+      def self.find_by_id(id)
+        sql = "SELECT * FROM rentals WHERE id = $1"
+        values = [id]
+        result = SqlRunner.run(sql,values).first()
+        return Rental.new(result)
+      end
+
+      def restock
+
+        # Add stock back to item
+        stock_item = Stock.find_by_id(@stock_id)
+        stock_item.amount += 1
+        stock_item.update()
+
+        # Delete self
+        delete
       end
 
 end

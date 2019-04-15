@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+        <title>RENTAL SHOP</title>
+    <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="body">
+
+    <div class="top-bar">
+    <p class="company-name-top">RENTAL SHOP</p1>
+    </div>
+
+    <div class="left-bar">
+
+    <nav>
+      <ul style="padding: 0px;">
+         <a href="/stocks"> <i id="button-stocks" class="fas fa-box fa-3x"> </i></a>
+         <a href="/customers"> <i id="button-customers" class="fas fa-users fa-3x"> </i></a>
+         <a href="/rentals"> <i id="button-customers" class="fas fa-credit-card fa-3x"> </i></a>
+      </ul>
+    </nav>
+
+    </div>
+
+
+    <div class="insert-frame">
+    <%= yield %>
+    </div>
+
+  </body>
+</html>

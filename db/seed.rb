@@ -18,15 +18,15 @@ customer2.save()
 stock1 = Stock.new({
 'name' => 'item1',
 'amount' => 100,
-'age_rating' => 12,
-'image' => 'IMAGE-URL'
+'price' => 12,
+'image' => '/images/LifeAquatic.jpg'
 })
 stock1.save()
 
 stock2 = Stock.new({
 'name' => 'item2',
 'amount' => 100,
-'age_rating' => 12,
+'price' => 12,
 'image' => 'IMAGE-URL'
 })
 stock2.save()

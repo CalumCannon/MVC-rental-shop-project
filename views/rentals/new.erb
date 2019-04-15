@@ -1,0 +1,27 @@
+<h1>NEW RENTAL</h1>
+
+<form  action="/rentals" method="post">
+  <label>
+  Customer:
+  <select name="customer_id">
+    <% for customer in @customers %>
+    <option value="<%= customer.id %>"><%= customer.name %></option>
+    <% end %>
+  </select>
+  </label>
+
+  
+  <label>
+  Stock:
+  <!-- WORK OUT HOW TO DISABLE SELCTIONS THAT ARE HAVE NO STOCK LEFT!  -->
+  <select name="stock_id">
+    <% for stock in @stocks %>
+      <% if(stock.check_out_stock) %>
+    <option value="<%= stock.id %>"><%= stock.name %></option>
+      <% end%>
+    <% end %>
+  </select>
+  </label>
+
+  <input class="btn btn--action" type='submit' value="Create">
+</form>

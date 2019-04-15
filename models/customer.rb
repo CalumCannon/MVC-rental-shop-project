@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('../models/rental.rb')
 
 class Customer
 
@@ -34,6 +35,14 @@ class Customer
       sql = "SELECT * FROM customers"
       values = SqlRunner.run(sql)
       return values.map{|customer| Customer.new(customer)}
+    end
+
+    def self.find_by_id(id)
+      sql = "SELECT * FROM customers WHERE id = $1"
+      values = [id]
+      result = SqlRunner.run(sql,values).first()
+      p result
+      return Customer.new(result)
     end
 
     def rentals

@@ -1,0 +1,19 @@
+<h1>CUSTOMER</h1>
+<a class="new-button" href="/customers/<%= @customer.id %>/edit"><p>EDIT CUSTOMER</p></a>
+
+<form action="/customers/<%= @customer.id %>/delete" method="POST">
+  <input class="new-button" type="submit" value="DELETE" />
+</form>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Rental Count</th>
+  </tr>
+  <tr>
+    <td><%= @customer.name %></td>
+    <td><%= @customer.age %></td>
+    <td><%= @rentals.count %></td>
+  </tr>
+</table>

@@ -1,0 +1,18 @@
+<h1>RENTAL</h1>
+
+<form action="/rentals/<%= @rental.id %>/delete" method="POST">
+  <input class="new-button" type="submit" value="DELETE" />
+</form>
+
+<table>
+  <tr>
+    <th>customer id</th>
+    <th>stock id</th>
+    <th>rent date</th>
+  </tr>
+  <tr>
+    <td><%= @rental.customer_id %></td>
+    <td><%= @rental.stock_id %></td>
+    <td><%= @rental.rent_date %></td>
+  </tr>
+</table>

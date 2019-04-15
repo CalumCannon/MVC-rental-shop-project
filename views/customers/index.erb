@@ -1,0 +1,16 @@
+<h1>CUSTOMERS</h1>
+<a class="new-button" href="/customers/new"><p>NEW CUSTOMER</p></a>
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Age</th>
+  </tr>
+  <% for customer in @customers %>
+  <tr>
+    <td> <a href="/customers/<%= customer.id %>" > <%= customer.name %> </a></td>
+    <td>|</td>
+    <td><%= customer.age %></td>
+  </tr>
+  <% end %>
+</table>
