@@ -2,7 +2,7 @@
 
 <form  action="/rentals" method="post">
   <label>
-  Customer:
+  <p>Customer: </p>
   <select name="customer_id">
     <% for customer in @customers %>
     <option value="<%= customer.id %>"><%= customer.name %></option>
@@ -10,9 +10,9 @@
   </select>
   </label>
 
-  
+
   <label>
-  Stock:
+  <p>Stock: </p>
   <!-- WORK OUT HOW TO DISABLE SELCTIONS THAT ARE HAVE NO STOCK LEFT!  -->
   <select name="stock_id">
     <% for stock in @stocks %>

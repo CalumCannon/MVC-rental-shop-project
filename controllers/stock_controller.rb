@@ -38,3 +38,13 @@ post '/stocks/:id/edit' do
   stock.update()
   redirect to ("/stocks")
 end
+
+post '/stocks/search' do
+  @stocks = Stock.search(params[:input])
+
+  # if(@stocks.length == 0)
+  #   Stock.search(params[:input]).capitalize
+  # end
+
+  erb ( :'stocks/index' )
+end

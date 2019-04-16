@@ -2,6 +2,7 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/customer.rb' )
 also_reload( '../models/*' )
+require('pry-byebug')
 
 get '/customers' do
   @customers = Customer.all()
@@ -38,4 +39,9 @@ post '/customers/:id/edit' do
   customer = Customer.new(params)
   customer.update()
   redirect to ("/customers")
+end
+
+post '/customers/search' do
+  @customers = Customer.search(params[:input].capitalize)
+  erb ( :'customers/index' )
 end

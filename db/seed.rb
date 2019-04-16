@@ -15,21 +15,56 @@ customer2 = Customer.new({
 })
 customer2.save()
 
+customer3 = Customer.new({
+'name' => 'Steve Zissou',
+'age' => 27,
+})
+customer3.save()
+
 stock1 = Stock.new({
-'name' => 'item1',
-'amount' => 100,
-'price' => 12,
-'image' => '/images/LifeAquatic.jpg'
+'name' => 'Star Craft',
+'amount' => 10,
+'price' => 20,
+'image' => '/images/starcraft_cover.jpeg',
+'type' => 'Game'
 })
 stock1.save()
 
 stock2 = Stock.new({
-'name' => 'item2',
+'name' => 'Life Aquatic',
 'amount' => 100,
 'price' => 12,
-'image' => 'IMAGE-URL'
+'image' => '/images/LifeAquatic.jpg',
+'type' => 'Film'
 })
 stock2.save()
+
+stock3 = Stock.new({
+'name' => 'Die Hard',
+'amount' => 100,
+'price' => 12,
+'image' => '/images/diehard.jpeg',
+'type' => 'Film'
+})
+stock3.save()
+
+stock4 = Stock.new({
+'name' => 'Counter Strike',
+'amount' => 100,
+'price' => 18,
+'image' => '/images/cs.jpeg',
+'type' => 'Game'
+})
+stock4.save()
+
+stock5 = Stock.new({
+'name' => 'Counter Strike',
+'amount' => 100,
+'price' => 18,
+'image' => '/images/cs.jpeg',
+'type' => 'TV-Show'
+})
+stock5.save()
 
 rental1 = Rental.new({
 'customer_id' => customer1.id,
@@ -52,6 +87,7 @@ rental3 = Rental.new({
 })
 rental3.save()
 # rental1.delete()
+
 
 binding.pry
 nil

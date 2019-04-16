@@ -8,6 +8,7 @@
   </tr>
   <% for rental in @rentals %>
   <tr>
+
     <td> <a href="/customers/<%=  rental.customer_id %>" > <%= Customer.find_by_id(rental.customer_id).name %> </a></td>
     <td> <a href="/stocks/<%= rental.stock_id %>" > <%= Stock.find_by_id(rental.stock_id).name %> </a></td>
     <td><%= rental.rent_date %></td>

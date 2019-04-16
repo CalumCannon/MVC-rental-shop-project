@@ -13,7 +13,8 @@ CREATE TABLE stocks (
  name VARCHAR,
  amount INT,
  price INT,
- image TEXT
+ image TEXT,
+ type VARCHAR
 );
 
 CREATE TABLE rentals (

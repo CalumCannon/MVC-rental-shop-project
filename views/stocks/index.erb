@@ -1,5 +1,13 @@
 <h1>STOCKS</h1>
 <a class="new-button" href="/stocks/new"><p>NEW STOCK</p></a>
+
+  <div class= "search-area">
+   <form style="height: 100%;"action="/stocks/search" method="POST">
+   <input class="search-input" type="text" name = "input" placeholder="Search">
+   <i class="fa fa-search"></i>
+  </form>
+  </div>
+
 <table>
   <tr>
     <th>IMG</th>
@@ -9,7 +17,7 @@
   </tr>
   <% for stock in @stocks %>
   <tr>
-    <td><img class="stock-img" src="<%= stock.image %>" alt=""></td>
+    <td><img class="stock-img" src="<%= stock.image %>" alt="IMAGE"></td>
     <td><a href="/stocks/<%= stock.id %>"><%= stock.name %></a></td>
     <td><%= stock.amount %></td>
     <td><%= stock.price %></td>

@@ -41,7 +41,6 @@ class Customer
       sql = "SELECT * FROM customers WHERE id = $1"
       values = [id]
       result = SqlRunner.run(sql,values).first()
-      p result
       return Customer.new(result)
     end
 
@@ -50,6 +49,13 @@ class Customer
       values = [@id]
       results = SqlRunner.run(sql, values)
       return results.map{|rental| Rental.new(rental)}
+    end
+
+    def self.search(search)
+      sql = "SELECT * FROM customers WHERE name LIKE $1"
+      values = ["%#{search}%"]
+      result = SqlRunner.run(sql,values)
+      return result.map{|customer|Customer.new(customer)}
     end
 
 end

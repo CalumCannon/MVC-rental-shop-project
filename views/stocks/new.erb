@@ -14,5 +14,14 @@
   <label for="image">Image Source:</label>
   <input type="text" name="image" value="">
 
+  <label for="type">Select Type:</label>
+  <select name="type">
+    <% for type in Types.all %>
+    <option value="<%= type %>"><%= type %></option>
+    <% end %>
+  </select>
+
+
+
   <input class="btn btn--action" type='submit' value="Create">
 </form>
