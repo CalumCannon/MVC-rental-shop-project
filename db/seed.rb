@@ -36,7 +36,7 @@ stock1.save()
 
 stock2 = Stock.new({
 'name' => 'Life Aquatic',
-'amount' => 100,
+'amount' => 7,
 'price' => 12,
 'image' => '/images/LifeAquatic.jpg',
 'type' => 'Film'
@@ -45,7 +45,7 @@ stock2.save()
 
 stock3 = Stock.new({
 'name' => 'Die Hard',
-'amount' => 100,
+'amount' => 3,
 'price' => 12,
 'image' => '/images/diehard.jpeg',
 'type' => 'Film'
@@ -54,7 +54,7 @@ stock3.save()
 
 stock4 = Stock.new({
 'name' => 'Counter Strike',
-'amount' => 100,
+'amount' => 25,
 'price' => 18,
 'image' => '/images/cs.jpeg',
 'type' => 'Game'
@@ -63,7 +63,7 @@ stock4.save()
 
 stock5 = Stock.new({
 'name' => 'Game of Thrones',
-'amount' => 100,
+'amount' => 17,
 'price' => 18,
 'image' => '/images/GoT.jpg',
 'type' => 'TV-Show'
@@ -72,7 +72,7 @@ stock5.save()
 
 stock6 = Stock.new({
 'name' => 'Spaced',
-'amount' => 100,
+'amount' => 20,
 'price' => 18,
 'image' => '/images/spaced.jpg',
 'type' => 'TV-Show'
