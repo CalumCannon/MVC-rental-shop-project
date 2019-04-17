@@ -89,15 +89,15 @@ rental1 = Rental.new({
 rental1.save()
 
 rental2 = Rental.new({
-'customer_id' => customer1.id,
-'stock_id' => stock1.id,
+'customer_id' => customer3.id,
+'stock_id' => stock2.id,
 'rent_date' => '12/04/19'
 })
 rental2.save()
 
 rental3 = Rental.new({
 'customer_id' => customer2.id,
-'stock_id' => stock1.id,
+'stock_id' => stock6.id,
 'rent_date' => '12/04/19'
 })
 rental3.save()

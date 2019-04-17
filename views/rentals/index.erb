@@ -9,8 +9,19 @@
     <th>View</th>
   </tr>
   <% for rental in @rentals %>
-  <tr>
+  <% classtype = "none" %>
 
+  <% case rental.get_type
+   when "Game" %>
+  <% classtype = "type-game"  %>
+  <% when "Film" %>
+  <% classtype = "type-film"  %>
+  <% when "TV-Show" %>
+  <% classtype = "type-tvshow"  %>
+  <% end %>
+
+
+  <tr class="<%= classtype %>">
     <td> <a href="/customers/<%=  rental.customer_id %>" > <%= Customer.find_by_id(rental.customer_id).name %> </a></td>
     <td> <a href="/stocks/<%= rental.stock_id %>" > <%= Stock.find_by_id(rental.stock_id).name %> </a></td>
     <td><%= rental.rent_date %></td>

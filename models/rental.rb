@@ -52,4 +52,8 @@ class Rental
         delete
       end
 
+      def get_type
+        return Stock.find_by_id(@stock_id).type
+      end
+
 end

@@ -39,7 +39,7 @@ td, tr, th{
 
   padding-left: 20px;
   padding-right: 20px;
-  border: 1px solid grey;
+  border: 1px solid black;
   text-align: left;
   font-family: arial;
   font-size: 1em;
@@ -104,7 +104,7 @@ margin-left: 120px;
 
 #button-stocks:hover{
   color: grey;
-  
+
 }
 
 .new-button{
@@ -146,4 +146,19 @@ overflow: hidden;
 .icon-text{
   text-align: -webkit-center;
   margin-top: -11px;
+}
+
+.new-container{
+}
+
+.type-game{
+  background-color: #d2ffd2;
+}
+
+.type-film{
+  background-color: #c7e7ff;
+}
+
+.type-tvshow{
+ background-color: #f9e5fb;
 }

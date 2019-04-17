@@ -32,8 +32,21 @@
     <th>Price</th>
     <th>View</th>
   </tr>
+
   <% for stock in @stocks %>
-  <tr>
+  <% classtype = "none" %>
+
+  <% case stock.type
+   when "Game" %>
+  <% classtype = "type-game"  %>
+  <% when "Film" %>
+  <% classtype = "type-film"  %>
+  <% when "TV-Show" %>
+  <% classtype = "type-tvshow"  %>
+  <% end %>
+
+
+  <tr class="<%= classtype %>">
     <td><img class="stock-img" src="<%= stock.image %>" alt="IMAGE"></td>
     <td><%= stock.name %></a></td>
     <td><%= stock.amount %></td>
