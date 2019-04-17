@@ -6,7 +6,7 @@ class Rental
         @id = options['id'].to_i if options['id']
         @customer_id = options['customer_id'].to_i
         @stock_id = options['stock_id'].to_i
-        @rent_date = options['rent_date']
+        @rent_date = '12/04/19' #options['rent_date']
       end
 
       def save

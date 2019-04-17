@@ -32,6 +32,7 @@ table{
 
 th{
   height: 50px;
+  background-color: #a9a9a9;
 }
 
 td, tr, th{
@@ -88,22 +89,22 @@ margin-left: 120px;
 
 #button-customers{
   color: white;
-  padding: 18px;
+  padding: 23px;
 }
 
 #button-customers:hover{
   color: grey;
-  padding: 18px;
+  padding: 23px;
 }
 
 #button-stocks{
   color: white;
-  padding: 22px;
+  padding: 26px;
 }
 
 #button-stocks:hover{
   color: grey;
-  padding: 22px;
+  
 }
 
 .new-button{
@@ -116,6 +117,7 @@ margin-left: 120px;
  display: inline-block;
  font-size: 0.8em;
  font-weight: bold;
+ margin: 3px;
 }
 
 .new-button:hover{
@@ -123,7 +125,6 @@ margin-left: 120px;
 }
 
 .stock-img{
-
 height: 75px;
 overflow: hidden;
 }
@@ -132,6 +133,7 @@ overflow: hidden;
   height: 50px;
   background-color: #729fc3;
   width: 80%;
+  display: flex;
 }
 
 .search-input{
@@ -139,6 +141,9 @@ overflow: hidden;
   margin-left: 7px;
   margin-top: 7px;
   margin-bottom: 7px;
+}
 
-
+.icon-text{
+  text-align: -webkit-center;
+  margin-top: -11px;
 }

@@ -3,6 +3,8 @@ require_relative('../models/rental.rb')
 require_relative('../models/stock.rb')
 require('pry-byebug')
 
+# CUSTOMERS
+
 customer1 = Customer.new({
 'name' => 'Jim Raynor',
 'age' => 35,
@@ -20,6 +22,8 @@ customer3 = Customer.new({
 'age' => 27,
 })
 customer3.save()
+
+# STOCKS
 
 stock1 = Stock.new({
 'name' => 'Star Craft',
@@ -58,13 +62,24 @@ stock4 = Stock.new({
 stock4.save()
 
 stock5 = Stock.new({
-'name' => 'Counter Strike',
+'name' => 'Game of Thrones',
 'amount' => 100,
 'price' => 18,
-'image' => '/images/cs.jpeg',
+'image' => '/images/GoT.jpg',
 'type' => 'TV-Show'
 })
 stock5.save()
+
+stock6 = Stock.new({
+'name' => 'Spaced',
+'amount' => 100,
+'price' => 18,
+'image' => '/images/spaced.jpg',
+'type' => 'TV-Show'
+})
+stock6.save()
+
+# RENTALS
 
 rental1 = Rental.new({
 'customer_id' => customer1.id,

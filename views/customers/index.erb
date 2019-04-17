@@ -1,6 +1,5 @@
 <h1>CUSTOMERS</h1>
 <a class="new-button" href="/customers/new"><p>NEW CUSTOMER</p></a>
-<a class="new-button" href="/customers/Jim/search"><p>SEARCH JIM</p></a>
 
   <div class= "search-area">
    <form style="height: 100%;"action="/customers/search" method="POST">
@@ -12,14 +11,14 @@
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
     <th>Age</th>
+    <th>View</th>
   </tr>
   <% for customer in @customers %>
   <tr>
-    <td> <a href="/customers/<%= customer.id %>" > <%= customer.name %> </a></td>
-    <td>|</td>
+    <td> <%= customer.name %> </td>
     <td><%= customer.age %></td>
+    <td><a class="new-button" href="/customers/<%= customer.id %>"><p>VIEW</p></a></td>
   </tr>
   <% end %>
 </table>

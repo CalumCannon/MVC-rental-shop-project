@@ -6,21 +6,39 @@
    <input class="search-input" type="text" name = "input" placeholder="Search">
    <i class="fa fa-search"></i>
   </form>
-  </div>
+
+ <!-- FILTER SELECT -->
+  <p style="padding-left: 20px;">Filter by category</p>
+
+    <form class="" action="/stocks/filter" method="post">
+
+    <select style="margin-top: 16px; margin-left: 10px;" class="" name="filter_type">
+
+    <% for type in Types.all %>
+      <option value="<%= type %>"><%= type %></option>
+    <% end %>
+
+      <input class="btn btn--action" type='submit' value="FILTER">
+</form>
+
+
+</div>
 
 <table>
   <tr>
-    <th>IMG</th>
+    <th></th>
     <th>Name</th>
     <th>Amount</th>
     <th>Price</th>
+    <th>View</th>
   </tr>
   <% for stock in @stocks %>
   <tr>
     <td><img class="stock-img" src="<%= stock.image %>" alt="IMAGE"></td>
-    <td><a href="/stocks/<%= stock.id %>"><%= stock.name %></a></td>
+    <td><%= stock.name %></a></td>
     <td><%= stock.amount %></td>
     <td><%= stock.price %></td>
+    <td><a class="new-button" href="/stocks/<%= stock.id %>"><p>VIEW</p></a></td>
   </tr>
   <% end %>
 </table>

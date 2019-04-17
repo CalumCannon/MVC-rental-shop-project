@@ -41,10 +41,10 @@ end
 
 post '/stocks/search' do
   @stocks = Stock.search(params[:input])
+  erb ( :'stocks/index' )
+end
 
-  # if(@stocks.length == 0)
-  #   Stock.search(params[:input]).capitalize
-  # end
-
+post '/stocks/filter' do
+  @stocks = Stock.filter(params[:filter_type])
   erb ( :'stocks/index' )
 end

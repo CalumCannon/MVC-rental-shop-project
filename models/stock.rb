@@ -25,8 +25,8 @@ class Stock
   end
 
   def update
-      sql = "UPDATE stocks SET (name, amount, price, image, type) = ($1,$2,$3,$4, $5) WHERE id = $6"
-      values = [@name, @amount, @price, @image, @id, @type]
+      sql = "UPDATE stocks SET (name, amount, price, image, type) = ($1,$2,$3,$4,$5) WHERE id = $6"
+      values = [@name, @amount, @price, @image, @type, @id]
       SqlRunner.run(sql,values)
   end
 
@@ -58,6 +58,13 @@ class Stock
    def self.search(search)
      sql = "SELECT * FROM stocks WHERE name LIKE $1"
      values = ["%#{search}%"]
+     result = SqlRunner.run(sql,values)
+     return result.map{|stock|Stock.new(stock)}
+   end
+
+   def self.filter(filter_type)
+     sql = "SELECT * FROM stocks WHERE type = $1"
+     values = [filter_type]
      result = SqlRunner.run(sql,values)
      return result.map{|stock|Stock.new(stock)}
    end

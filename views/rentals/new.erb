@@ -13,7 +13,7 @@
 
   <label>
   <p>Stock: </p>
-  <!-- WORK OUT HOW TO DISABLE SELCTIONS THAT ARE HAVE NO STOCK LEFT!  -->
+  <!-- SOMETHING HERE IS BREAKING CODE - function CHECK OUT OF STOCK -->
   <select name="stock_id">
     <% for stock in @stocks %>
       <% if(stock.check_out_stock) %>
