@@ -1,4 +1,4 @@
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Alt text](relative/Screenshot 2019-05-24 at 10.48.21.png?raw=true "Title")
 
 # Brief
 
