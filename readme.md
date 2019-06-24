@@ -1,4 +1,6 @@
-![Alt text](Screenshot 2019-05-24 at 10.48.21.png?raw=true "Title")
+# Project Screenshot
+
+![Alt text](RentalShop.png?raw=true "Title")
 
 # Brief
 
